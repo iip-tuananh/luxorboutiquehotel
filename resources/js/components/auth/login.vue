@@ -66,7 +66,7 @@ export default {
       this.retrieveToken(this.objLogin)
         .then((response) => {
           this.loadings(false);
-          this.$router.push({ name: "listProduct" });
+          this.$router.push({ name: "listService" });
           window.location.reload();
         })
         .catch((error) => {
