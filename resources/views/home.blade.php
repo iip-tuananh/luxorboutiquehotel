@@ -110,7 +110,7 @@
             #search-widget-panel .bws-ipt-calendar {
                 width: 100% !important;
                 height: 40px !important;
-                font-family: 'Lora', serif !important;
+                font-family: 'Quicksand', serif !important;
                 font-size: 16px !important;
                 border-radius: 5px !important;
                 border: 1px solid #e0e0e0 !important;
@@ -121,7 +121,7 @@
             }
             #search-widget-panel .bws-button {
                 font-size: 18px !important;
-                font-family: 'Lora', serif !important;
+                font-family: 'Quicksand', serif !important;
             }
             div#search-widget-panel div.swp-col3 a#bws-button-search {
                 background-color: #b37b2e !important;

@@ -222,13 +222,13 @@
                                 <style>
                                     #hbe-bws-page {
                                         padding: 0 !important;
-                                        font-family: 'Lora', serif !important;
+                                        font-family: 'Quicksand', serif !important;
                                         font-size: 16px !important;
                                     }
                                     #hbe-bws-page .bws-button {
                                         background: #d6ad5b !important;
                                         color: #fff !important;
-                                        font-family: 'Lora', serif !important;
+                                        font-family: 'Quicksand', serif !important;
                                         font-size: 18px !important;
                                     }
                                     #hbe-bws-page .room-type-name {
@@ -249,7 +249,7 @@
                                     #hbe-bws-page #check_in_show, #hbe-bws-page #check_out_show {
                                         width: 100% !important;
                                         height: 40px !important;
-                                        font-family: 'Lora', serif !important;
+                                        font-family: 'Quicksand', serif !important;
                                         font-size: 16px !important;
                                         border-radius: 5px !important;
                                         border: 1px solid #e0e0e0 !important;
