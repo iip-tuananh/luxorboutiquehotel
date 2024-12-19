@@ -6,7 +6,7 @@
     {{ $setting->webname }}
 @endsection
 @section('image')
-    {{ url('frontend/img/homeimage.jpg') }}
+    {{ url($banner[0]->image) }}
 @endsection
 @section('css')
 @endsection
@@ -174,7 +174,7 @@
                         <div class="wptb-image-single wow fadeInUp">
                             <div class="wptb-item--inner">
                                 <div class="wptb-item--image position-relative">
-                                    <img src="{{ json_decode($gioithieu->image)[0] }}" alt="img">
+                                    <img src="{{ json_decode($gioithieu->image)[0] }}" alt="img" loading="lazy">
                                     <div class="wptb-item--video-button">
                                         <a class="btn" data-fancybox=""
                                             href="https://www.youtube.com/watch?v=GF_rBXxoHvE">
@@ -188,8 +188,8 @@
                                 </div>
                             </div>
                             <div class="wptb-item-layer wptb-item-layer-one both-version">
-                                <img src="{{ url('frontend/img/light-2.png') }}" alt="img">
-                                <img src="{{ url('frontend/img/light-2-light.png') }}" alt="img">
+                                <img src="{{ url('frontend/img/light-2.png') }}" alt="img" loading="lazy">
+                                <img src="{{ url('frontend/img/light-2-light.png') }}" alt="img" loading="lazy">
                             </div>
                         </div>
                     </div>
@@ -232,7 +232,7 @@
                                 <div class="grid-item">
                                     <div class="wptb-item--inner ">
                                         <div class="wptb-item--image">
-                                            <img src="{{ $imgduan[0] }}" alt="img" style="height: 324px !important;">
+                                            <img src="{{ $imgduan[0] }}" alt="img" style="height: 324px !important;" loading="lazy">
                                         </div>
                                         <div class="wptb-item--holder">
                                             <div class="wptb-item--meta">
@@ -301,8 +301,8 @@
                                     <div class="wptb-item--inner">
                                         <a href="{{ route('serviceDetail', ['cate' => $item->cateService->slug, 'slug' => $item->slug]) }}">
                                             <div class="wptb-item--icon">
-                                                <img src="{{ $img_ser[0] }}" alt="img" class="default-icon">
-                                                <img src="{{ $img_ser[0] }}" alt="img" class="hover-icon">
+                                                <img src="{{ $img_ser[0] }}" alt="img" class="default-icon" loading="lazy">
+                                                <img src="{{ $img_ser[0] }}" alt="img" class="hover-icon" loading="lazy">
                                             </div>
                                         </a>
                                         <div class="wptb-item--holder">
@@ -365,7 +365,7 @@
                                                     <p class="wptb-item--description"> {!! languageName($item->content) !!}</p>
                                                     <div class="wptb-item--meta">
                                                         <div class="wptb-item--image">
-                                                            <img src="{{ $item->avatar }}" alt="img">
+                                                            <img src="{{ $item->avatar }}" alt="img" loading="lazy">
                                                         </div>
                                                         <div class="wptb-item--meta-left">
                                                             <h4 class="wptb-item--title">{{ languageName($item->name) }}
@@ -419,7 +419,7 @@
                                         <div class="wptb-item--inner">
                                             <div class="wptb-item--image">
                                                 <a href="" class="wptb-item-link"><img src="{{ $item->image }}"
-                                                        alt="img"></a>
+                                                        alt="img" loading="lazy"></a>
                                             </div>
                                             <div class="wptb-item--holder">
                                                 <div class="wptb-item--date">{{ date_format($item->created_at, 'd/m/Y') }}
@@ -445,8 +445,8 @@
         <!-- Contact -->
         <section class="wptb-contact-form style1">
             <div class="wptb-item-layer both-version">
-                <img src="{{ url('frontend/img/texture-2.png') }}" alt="texture-2.png">
-                <img src="{{ url('frontend/img/texture-2-light.png') }}" alt="texture-2-light.png">
+                <img src="{{ url('frontend/img/texture-2.png') }}" alt="texture-2.png" loading="lazy">
+                <img src="{{ url('frontend/img/texture-2-light.png') }}" alt="texture-2-light.png" loading="lazy">
             </div>
             <div class="container">
                 {{-- <div class="wptb-form--wrapper">

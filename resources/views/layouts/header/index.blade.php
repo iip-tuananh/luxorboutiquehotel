@@ -7,7 +7,7 @@
                 <!-- Left Part -->
                 <div class="header_left_part d-flex align-items-center" style="width: 176px;">
                     <div class="logo">
-                        <a href="/" class="light_logo"><img src="{{ $setting->logo }}" alt="logo"></a>
+                        <a href="/" class="light_logo"><img src="{{ $setting->logo }}" alt="logo" loading="lazy"></a>
                         {{-- <a href="/" class="dark_logo"><img src="./img/logo-dark.svg" alt="logo"></a> --}}
                     </div>
                 </div>
@@ -68,9 +68,9 @@
                         </span>
                     </a> --}}
                     <div class="lang-wrap">
-                        <a href="javascript:;" onclick="translateheader('vi')"><img style="width: 30px;" src="{{url('frontend/img/vn.png')}}" alt=""></a>
+                        <a href="javascript:;" onclick="translateheader('vi')"><img style="width: 30px;" src="{{url('frontend/img/vn.png')}}" alt="" loading="lazy"></a>
                         {{-- <span>/</span> --}}
-                        <a href="javascript:;" onclick="translateheader('en')"><img style="width: 30px;" src="{{url('frontend/img/eng.png')}}" alt=""></a>
+                        <a href="javascript:;" onclick="translateheader('en')"><img style="width: 30px;" src="{{url('frontend/img/eng.png')}}" alt="" loading="lazy"></a>
                      </div>
                     <button type="button" class="mr_menu_toggle wptb-element d-xl-none">
                         <i class="bi bi-list"></i>
