@@ -241,9 +241,9 @@
                                                 </h4>
                                                 <ul class="option_project">
                                                     <li class=""><b class="proce">{{ number_format($item->price) }}đ</b></li><br>
-                                                    <li>{{ $item->wc }} Người |</li>
+                                                    <li>{{ $item->wc }} People |</li>
                                                     <li>{{ $item->phongngu }} |</li>
-                                                    <li>{{ $item->dientich }}</li>
+                                                    <li>{{ $item->dientich }} m2</li>
                                                 </ul>
                                             </div>
                                         </div>
