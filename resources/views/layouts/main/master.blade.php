@@ -208,7 +208,7 @@
     <div id="preloader">
         <div class="preloader-inner">
             <div class="spinner">
-                <img src="{{ $setting->logo_footer }}" alt="img">
+                <img src="{{ $setting->logo_footer }}" alt="img" loading="lazy">
                 {{-- <img src="{{ $setting->logo }}" alt="img" class="wheel"> --}}
             </div>
         </div>
@@ -238,7 +238,7 @@
             <div class="hotline-phone-ring-circle-fill"></div>
             <div class="hotline-phone-ring-img-circle">
                 <a href="tel:0338999639" class="pps-btn-img">
-                    <img src="{{ url('frontend/img/phone.png') }}" alt="Gọi điện thoại" width="50">
+                    <img src="{{ url('frontend/img/phone.png') }}" alt="Gọi điện thoại" width="50" loading="lazy">
                 </a>
             </div>
         </div>
@@ -255,22 +255,22 @@
         <a target="blank" href="" class="fabs roundCool" id="challenges-fab"
             data-tooltip="Send Messenger">
             <img class="inner-fab-icon" src="{{ url('frontend/img/messenger-icon.png') }}" alt="challenges-icon"
-                border="0">
+                border="0" loading="lazy">
         </a>
         <a target="blank" href="https://zalo.me/0338999639" class="fabs roundCool" id="chat-fab"
             data-tooltip="Send message Zalo">
             <img class="inner-fab-icon" src="{{ url('frontend/img/zalo.png') }}" alt="chat-active-icon"
-                border="0">
+                border="0" loading="lazy">
         </a>
         <a target="blank" href="https://maps.app.goo.gl/RbxLcX4hv5CqZALo9" class="fabs roundCool" id="chat-fab"
             data-tooltip="View map">
             <img class="inner-fab-icon" src="{{ url('frontend/img/map.png') }}" alt="chat-active-icon"
-                border="0">
+                border="0" loading="lazy">
         </a>
 
     </div>
     <div class="fabs roundCool call-animation" id="main-fab">
-        <img class="img-circle" src="{{ url('frontend/img/lienhe.png') }}" alt="" width="135">
+        <img class="img-circle" src="{{ url('frontend/img/lienhe.png') }}" alt="" width="135" loading="lazy">
     </div>
     <div class="totop">
         <a href="#"><i class="bi bi-chevron-up"></i></a>
