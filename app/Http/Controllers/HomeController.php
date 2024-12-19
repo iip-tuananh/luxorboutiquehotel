@@ -25,7 +25,7 @@ class HomeController extends Controller
         $data['hotnews'] = Blog::where([
             ['status','=',1]
         ])->orderBy('id','DESC')->limit(5)->get(['id','title','slug','created_at','image','description']);
-        $data['gioithieu'] = PageContent::where(['slug'=>'gioi-thieu','language'=>'vi'])->first(['id','title','content','image']);
+        $data['gioithieu'] = PageContent::where(['slug'=>'gioi-thieu','language'=>'vi'])->first(['id','title','content','image','description']);
         $data['duan'] = Services::where(['status'=>1,'status_home'=>1])->get();
         $data['ReviewCus'] = ReviewCus::where(['status'=>1])->get();
         $data['Partner'] = Partner::where(['status'=>1])->get();
