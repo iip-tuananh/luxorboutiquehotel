@@ -229,7 +229,7 @@
                             <div class="col-xl-5 col-md-5 ps-xl-5 ps-md-4">
                                 <div class="sidebar">
                                     <div class="post-header">
-                                        <h1 class="post-title fw-normal">Thông tin chi tiết phòng</h1>
+                                        <h1 class="post-title fw-normal">Room Information</h1>
                                     </div>
                                     <div class="divider-line-hr my-4"></div>
                                     <div class="wptb-project-info1 mb-0 border-0 bg-transparent">
@@ -237,22 +237,21 @@
                                             <div class="row">
                                                 <div class="col-xxl-6">
                                                     <div class="wptb--item border-0">
-                                                        <div class="wptb--meta"><i class="fa-solid fa-crop"></i><label>Diện
-                                                                Tích:</label>
+                                                        <div class="wptb--meta"><i class="fa-solid fa-crop"></i><label>Area:</label>
                                                             <span>{{ $detail_service->dientich }}</span></div>
                                                     </div>
                                                 </div>
                                                 <div class="col-xxl-6 mb-1 mt-xxl-0">
                                                     <div class="wptb--item border-0">
-                                                        <div class="wptb--meta"><i class="fa-regular fa-user"></i><label>Số
-                                                                lượng người:</label>
+                                                        <div class="wptb--meta"><i class="fa-regular fa-user"></i><label>Number
+                                                                people:</label>
                                                             <span>{{ $detail_service->wc }}</span></div>
                                                     </div>
                                                 </div>
                                                 <div class="col-xxl-12">
                                                     <div class="wptb--item border-0">
-                                                        <div class="wptb--meta"><i class="fas fa-bed"></i><label>Giường
-                                                                ngủ:</label> <span>{{ $detail_service->phongngu }}</span>
+                                                        <div class="wptb--meta"><i class="fas fa-bed"></i><label>Bed
+                                                                :</label> <span>{{ $detail_service->phongngu }}</span>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -264,14 +263,14 @@
                                         @if ($detail_service->price > 0)
                                             <b>{{ number_format($detail_service->price) }} VNĐ</b>
                                         @else
-                                            <b>Giá Liên Hệ</b>
+                                            <b>Price Contact</b>
                                         @endif
 
                                     </div>
                                     <div class="wptb-item--button mt-2 mb-2">
                                         <a class="btn btn-two white" href="tel:{{ $setting->phone1 }}">
                                             <span class="btn-wrap">
-                                                <span class="text-first">Gọi hotline</span>
+                                                <span class="text-first">Call hotline</span>
                                                 <span class="text-second"> <i class="bi bi-telephone"></i> <i
                                                         class="bi bi-telephone"></i></span>
                                             </span>
@@ -279,7 +278,7 @@
                                         <a href="{{ route('orderNow') }}" class="btn btn-two creative text-uppercase mt-1"
                                             style="font-size: 12px;padding: 7px 12px;">
                                             <span class="btn-wrap">
-                                                <span class="text-first">Đặt Phòng</span>
+                                                <span class="text-first">Book Room</span>
                                             </span>
                                         </a>
                                     </div>
@@ -304,7 +303,7 @@
                                 <div class="row align-items-center">
                                     <div class="col-lg-12">
                                         <h6 class="wptb-item--subtitle"><span>01 //</span> Project</h6>
-                                        <h1 class="wptb-item--title mb-0">Phòng khác<br>
+                                        <h1 class="wptb-item--title mb-0">Other room<br>
                                         </h1>
                                     </div>
                                 </div>
@@ -333,7 +332,7 @@
                                                     |</li>
                                                 <li>{{ $item->phongngu }} |</li>
                                                 <li>{{ $item->dientich }} |</li>
-                                                <li>{{ $item->wc }} người</li>
+                                                <li>{{ $item->wc }} people</li>
                                             </ul>
                                         </div>
                                     </div>

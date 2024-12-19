@@ -208,7 +208,7 @@
     <div id="preloader">
         <div class="preloader-inner">
             <div class="spinner">
-                <img src="{{ $setting->logo }}" alt="img">
+                <img src="{{ $setting->logo_footer }}" alt="img">
                 {{-- <img src="{{ $setting->logo }}" alt="img" class="wheel"> --}}
             </div>
         </div>
