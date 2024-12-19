@@ -197,7 +197,7 @@
                         <div class="wptb-about--text ps-md-5">
                             <h3></h3>
                             <div class="line_10">
-                                {!! $gioithieu->content !!}
+                                {!! $gioithieu->description !!}
                             </div>
                             <a class="btn btn-two white-opacity creative" href="{{ route('aboutUs') }}">
                                 <span class="btn-wrap">
