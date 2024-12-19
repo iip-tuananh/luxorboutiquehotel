@@ -18,7 +18,7 @@
                <div class="col-lg-4 col-md-4 mb-5 mb-md-0 order-md-2 order-1">
                   <div class="footer-widget text-center">
                      <div class="logo mr-bottom-55">
-                        <a href="{{route('home')}}" class=""><img src="{{$setting->logo}}" alt="logo"></a>
+                        <a href="{{route('home')}}" class=""><img src="{{$setting->logo_footer}}" alt="logo"></a>
                      </div>
                      {{-- <form class="newsletter-form" method="post">
                         <div class="form-group">

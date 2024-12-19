@@ -6,7 +6,7 @@
     font-weight: var(--fw-light);
     line-height: 34px;
     color: var(--color-white);
-    background-color: #42170b;
+    background-color: #e0c246;
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -23,12 +23,12 @@
 }
 .footer .footer--inner{
     position: relative;
-    padding-top: 115px;
-    padding-bottom: 60px;
+    padding-top: 70px;
+    padding-bottom: 0px;
     overflow: hidden;
 }
 .footer .footer-widget:has(.footer-nav) {
-    /* margin-top: 50px; */
+    margin-top: 50px;
 }
 
 .footer ul {
@@ -77,11 +77,11 @@
     padding-left: 0px;
     text-decoration: none;
     padding-left: 0px;
-    color: #edcb74;
+    color: #42170b;
     font-family: var(--font-family-base);
     font-size: 16px;
     font-style: normal;
-    font-weight: var(--fw-medium);
+    font-weight: 700;
     line-height: 26px; /* 185.714% */
     letter-spacing: 3px;
     text-transform: uppercase;
@@ -106,7 +106,7 @@
 
 /* Footer Bottom Part  */
 .footer .footer-bottom {
-    border-top: 1px solid rgba(var(--color-white-fixed-rgb), 0.1);
+    border-top: 1px solid rgb(79 22 15);
     padding: 27px 0px;
 }
 .footer .footer-bottom .footer-bottom-inner{
@@ -114,7 +114,7 @@
     align-items: center;
     justify-content: space-between;
     flex-flow: row wrap;
-    color: var(--color-two-fixed);
+    color: #42170b;
 }
 
 .footer .footer-nav-bottom ul {
@@ -134,7 +134,7 @@
 }
 
 .footer .copyright a:not(:hover) {
-    color: var(--color-white-fixed);
+    color: #42170b;
 }
 .footer .footer-nav-bottom ul li a {
     color: var(--color-two-fixed);
@@ -188,7 +188,7 @@
 .totop a {
     width: 54px;
     height: 54px;
-    background: var(--color-one);
+    background: #42170b;
     color: var(--color-white-fixed);
     display: inline-block;
     text-align: center;
@@ -262,8 +262,8 @@
 }
 
 .footer .social-box.style-oval ul li a:not(:hover) {
-    border-color: var(--color-white-fixed);
-    color: var(--color-white-fixed);
+    border-color: #4d160d;
+    color: #43170b;
 }
 
 

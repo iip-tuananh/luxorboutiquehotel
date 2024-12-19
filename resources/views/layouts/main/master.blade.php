@@ -275,7 +275,7 @@
     <div class="totop">
         <a href="#"><i class="bi bi-chevron-up"></i></a>
     </div>
-    <a href="{{ route('orderNow') }}" class="c-book-expand" style="display: inline;"><span>Book Room</span></a>
+    <a href="{{ route('orderNow') }}" class="c-book-expand" style="display: inline;"><span>Book Now</span></a>
 
 
     <!-- Framework -->
