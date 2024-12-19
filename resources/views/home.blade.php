@@ -243,7 +243,7 @@
                                                     <li class=""><b class="proce">{{ number_format($item->price) }}đ</b></li><br>
                                                     <li>{{ $item->wc }} People |</li>
                                                     <li>{{ $item->phongngu }} |</li>
-                                                    <li>{{ $item->dientich }} m2</li>
+                                                    <li>{{ $item->dientich }}</li>
                                                 </ul>
                                             </div>
                                         </div>
