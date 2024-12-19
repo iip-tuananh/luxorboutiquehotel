@@ -312,3 +312,8 @@
         margin-top: 8px;
     }
 }
+@media (max-width: 768px) {
+    .footer .footer-widget.text-md-end {
+        text-align: end;
+    }
+}

@@ -3,7 +3,7 @@
       <div class="container">
          <div class="footer--inner">
             <div class="row">
-               <div class="col-lg-4 col-md-4 col-sm-6 mb-5 mb-md-0 order-md-1 order-2">
+               <div class="col-lg-4 col-md-4 col-sm-6 col-6 mb-5 mb-md-0 order-md-1 order-2">
                   <div class="footer-widget">
                      <div class="footer-nav">
                         <ul>
@@ -15,7 +15,7 @@
                      </div>
                   </div>
                </div>
-               <div class="col-lg-4 col-md-4 mb-5 mb-md-0 order-md-2 order-1">
+               <div class="col-lg-4 col-md-4 col-12 mb-md-0 order-md-2 order-1">
                   <div class="footer-widget text-center">
                      <div class="logo mr-bottom-55">
                         <a href="{{route('home')}}" class=""><img src="{{$setting->logo_footer}}" alt="logo"></a>
@@ -33,7 +33,7 @@
                      </form> --}}
                   </div>
                </div>
-               <div class="col-lg-4 col-md-4 col-sm-6 mb-5 mb-md-0 order-md-3 order-3">
+               <div class="col-lg-4 col-md-4 col-sm-6 col-6 mb-5 mb-md-0 order-md-3 order-3">
                   <div class="footer-widget text-md-end">
                      <div class="footer-nav">
                         <ul>

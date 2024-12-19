@@ -177,7 +177,7 @@
 
     .hotline-phone-ring-wrap {
         bottom: -2px;
-        right: 60px
+        right: -6px
     }
 }
 
@@ -329,4 +329,25 @@
     visibility: visible;
     opacity: 1;
     overflow: hidden
+}
+
+@media (max-width: 768px) {
+    .fabs {
+        bottom: 110px;
+    }
+    .inner-fabs .fabs {
+        bottom: 110px;
+    }
+    .inner-fabs.show .fabs:first-child {
+        bottom: 170px;
+    }
+    .inner-fabs.show .fabs:nth-child(2) {
+        bottom: 220px;
+    }
+    .inner-fabs.show .fabs:nth-child(3) {
+        bottom: 270px;
+    }
+    .totop {
+        bottom: 198px;
+    }
 }

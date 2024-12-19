@@ -502,70 +502,70 @@
                 </div> --}}
                 <div class="wptb-office-address mr-top-100">
                     <div class="row">
-                        <div class="col-lg-4 col-md-6">
+                        <div class="col-lg-4 col-md-6 col-6">
                             <div class="wptb-icon-box1 wow fadeInLeft">
                                 <div class="wptb-item--inner flex-start">
                                     <div class="wptb-item--icon"><i class="bi bi-phone"></i></div>
                                     <div class="wptb-item--holder">
                                         <h3 class="wptb-item--title">Hotline</h3>
-                                        <p class="wptb-item--description">{{ $setting->phone1 }}</p>
+                                        <p class="wptb-item--description hidden-xs">{{ $setting->phone1 }}</p>
                                         <a href="tel:{{ $setting->phone1 }}" class="wptb-item--link">Call Now</a>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-4 col-md-6 ">
+                        <div class="col-lg-4 col-md-6 col-6">
                             <div class="wptb-icon-box1 wow fadeInLeft">
                                 <div class="wptb-item--inner flex-start">
                                     <div class="wptb-item--icon"><i class="bi bi-envelope"></i></div>
                                     <div class="wptb-item--holder">
                                         <h3 class="wptb-item--title">Email</h3>
-                                        <p class="wptb-item--description">{{ $setting->email }}</p>
+                                        <p class="wptb-item--description hidden-xs">{{ $setting->email }}</p>
                                         <a href="mailto:{{ $setting->email }}" class="wptb-item--link">Send Email</a>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-4 col-md-6">
+                        <div class="col-lg-4 col-md-6 col-6">
                             <div class="wptb-icon-box1 wow fadeInLeft">
                                 <div class="wptb-item--inner flex-start">
                                     <div class="wptb-item--icon">Z</div>
                                     <div class="wptb-item--holder">
                                         <h3 class="wptb-item--title">Zalo</h3>
-                                        <p class="wptb-item--description"></p>
+                                        <p class="wptb-item--description hidden-xs"></p>
                                         <a target="_blank" href="https://zalo.me/{{ $setting->phone1 }}"
                                             class="wptb-item--link">Send Message</a>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-4 col-md-6">
+                        <div class="col-lg-4 col-md-6 col-6">
                             <div class="wptb-icon-box1 wow fadeInLeft">
                                 <div class="wptb-item--inner flex-start">
                                     <div class="wptb-item--icon"><i class="bi bi-youtube"></i></div>
                                     <div class="wptb-item--holder">
                                         <h3 class="wptb-item--title">Youtube</h3>
-                                        <p class="wptb-item--description">{{ $setting->google }}</p>
+                                        <p class="wptb-item--description hidden-xs">{{ $setting->google }}</p>
                                         <a target="_blank" href="{{ $setting->google }}" class="wptb-item--link">View
                                             Channel</a>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-4 col-md-6 ">
+                        <div class="col-lg-4 col-md-6 col-6">
                             <div class="wptb-icon-box1 wow fadeInLeft">
                                 <div class="wptb-item--inner flex-start">
                                     <div class="wptb-item--icon"><i class="bi bi-facebook"></i></div>
                                     <div class="wptb-item--holder">
                                         <h3 class="wptb-item--title">Facebook</h3>
-                                        <p class="wptb-item--description">{{ $setting->facebook }}</p>
+                                        <p class="wptb-item--description hidden-xs">{{ $setting->facebook }}</p>
                                         <a target="_blank" href="{{ $setting->facebook }}" class="wptb-item--link">Visit
                                             Page</a>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-4 col-md-6">
+                        <div class="col-lg-4 col-md-6 col-6">
                             <div class="wptb-icon-box1 wow fadeInLeft">
                                 <div class="wptb-item--inner flex-start">
                                     <div class="wptb-item--icon"><i class="bi bi-geo-alt"></i></div>
@@ -582,4 +582,15 @@
             </div>
         </section>
     </main>
+    <style>
+        @media (max-width: 768px) {
+            .hidden-xs {
+                display: none;
+            }
+            .wptb-icon-box1 .wptb-item--icon {
+                height: 40px;
+                width: 40px;
+            }
+        }
+    </style>
 @endsection
