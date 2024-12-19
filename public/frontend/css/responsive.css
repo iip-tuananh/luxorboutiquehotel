@@ -45,31 +45,41 @@
 
 @media screen and (max-width: 991px) {
     .section, section, .wptb-about-two {
-        padding: 50px 0px;
+        padding: 52px 0px;
+    }
+
+    .wptb-slider.style2 {
+        padding: 0px 0px;
+        height: 80vh;
+        overflow: hidden;
+    }
+
+    .wptb-slider.style2 .wptb-slider--item {
+        height: 80vh;
     }
 
     .h1, h1 {
-        font-size: var(--fs-30);
+        font-size: var(--fs-42);
         line-height: 1.3em;
     }
 
     .blog-details .post-header .post-title, .h2, h2 {
-        font-size: var(--fs-25);
+        font-size: var(--fs-30);
         line-height: 1.2em;
     }
 
     .h3, h3 {
-        font-size: var(--fs-22);
+        font-size: var(--fs-24);
         line-height: 1.4em;
     }
 
     .h4, h4 {
-        font-size: var(--fs-20);
+        font-size: var(--fs-22);
         line-height: 1.6em;
     }
 
     .h5, h5 {
-        font-size: var(--fs-18);
+        font-size: var(--fs-20);
         line-height: 1.6em;
     }
 
@@ -119,14 +129,14 @@
     }
 
     .blog-details.blog-details-box {
-        padding: 58px 15px;
+        padding: 100px 15px;
     }
 
     .wptb-album-one {
         padding-left: 0;
         padding-right: 0;
         padding-top: 30px;
-        padding-bottom: 200px;
+        /* padding-bottom: 200px; */
     }
 
     .portfolio-filters-content .filters-button-group .button {
@@ -162,27 +172,27 @@
 
 @media screen and (max-width: 767px) {
     .h1, h1 {
-        font-size: var(--fs-29);
+        font-size: var(--fs-42);
     }
 
     .h2, h2 {
-        font-size: var(--fs-25);
+        font-size: var(--fs-30);
     }
 
     .h3, h3 {
-        font-size: var(--fs-22);
+        font-size: var(--fs-24);
     }
 
     .h4, h4 {
-        font-size: var(--fs-20);
+        font-size: var(--fs-22);
     }
 
     .h5, h5 {
-        font-size: var(--fs-18);
+        font-size: var(--fs-20);
     }
 
     .h6, h6 {
-        font-size: var(--fs-16);
+        font-size: var(--fs-18);
     }
 
     .wptb-counter1 .wptb-item--value {
@@ -283,11 +293,11 @@
 
 @media screen and (max-width: 575px) {
     .h1, h1 {
-        font-size: var(--fs-30);
+        font-size: var(--fs-36);
     }
 
     .h2, h2 {
-        font-size: var(--fs-24);
+        font-size: var(--fs-26);
     }
 
     .h3, h3 {

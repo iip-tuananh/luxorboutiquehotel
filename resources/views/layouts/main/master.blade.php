@@ -203,7 +203,7 @@
     </style>
 </head>
 
-<body>
+<body class="theme-style--light">
     <!-- Preloader -->
     <div id="preloader">
         <div class="preloader-inner">
@@ -253,13 +253,18 @@
     </div>
     <div class="inner-fabs">
         <a target="blank" href="" class="fabs roundCool" id="challenges-fab"
-            data-tooltip="Nhắn tin facebook">
+            data-tooltip="Send Messenger">
             <img class="inner-fab-icon" src="{{ url('frontend/img/messenger-icon.png') }}" alt="challenges-icon"
                 border="0">
         </a>
         <a target="blank" href="https://zalo.me/0338999639" class="fabs roundCool" id="chat-fab"
-            data-tooltip="Nhắn tin Zalo">
+            data-tooltip="Send message Zalo">
             <img class="inner-fab-icon" src="{{ url('frontend/img/zalo.png') }}" alt="chat-active-icon"
+                border="0">
+        </a>
+        <a target="blank" href="https://maps.app.goo.gl/RbxLcX4hv5CqZALo9" class="fabs roundCool" id="chat-fab"
+            data-tooltip="View map">
+            <img class="inner-fab-icon" src="{{ url('frontend/img/map.png') }}" alt="chat-active-icon"
                 border="0">
         </a>
 
@@ -270,7 +275,7 @@
     <div class="totop">
         <a href="#"><i class="bi bi-chevron-up"></i></a>
     </div>
-    <a href="{{ route('orderNow') }}" class="c-book-expand" style="display: inline;"><span>Đặt Phòng</span></a>
+    <a href="{{ route('orderNow') }}" class="c-book-expand" style="display: inline;"><span>Book Room</span></a>
 
 
     <!-- Framework -->

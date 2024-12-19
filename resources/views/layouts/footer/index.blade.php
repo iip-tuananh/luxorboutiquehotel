@@ -1,13 +1,13 @@
-<footer class="footer style1 bg-image-2" style="background-image: url('{{url('frontend/img/bg-5.png')}}');">
+<footer class="footer style1 bg-image-2">
    <div class="footer-top">
       <div class="container">
          <div class="footer--inner">
             <div class="row">
-               <div class="col-lg-4 col-md-4 col-sm-6 mb-5 mb-md-0">
+               <div class="col-lg-4 col-md-4 col-sm-6 mb-5 mb-md-0 order-md-1 order-2">
                   <div class="footer-widget">
                      <div class="footer-nav">
                         <ul>
-                           <li class="menu-item"><a href="{{route('home')}}">Trang Chủ</a></li>
+                           <li class="menu-item"><a href="{{route('home')}}">Home page</a></li>
                            @foreach ($servicehome as $item)
                            <li class="menu-item"><a href="{{route('serviceList',['slug'=>$item->slug])}}">{{$item->name}}</a></li>
                            @endforeach
@@ -15,12 +15,12 @@
                      </div>
                   </div>
                </div>
-               <div class="col-lg-4 col-md-4 mb-5 mb-md-0 order-1 order-md-0">
+               <div class="col-lg-4 col-md-4 mb-5 mb-md-0 order-md-2 order-1">
                   <div class="footer-widget text-center">
                      <div class="logo mr-bottom-55">
-                        <a href="" class=""><img src="{{$setting->logo_footer}}" alt="logo"></a>
+                        <a href="{{route('home')}}" class=""><img src="{{$setting->logo}}" alt="logo"></a>
                      </div>
-                     <form class="newsletter-form" method="post">
+                     {{-- <form class="newsletter-form" method="post">
                         <div class="form-group">
                            <input type="email" name="email" class="form-control" placeholder="Enter your email" required>
                         </div>
@@ -30,16 +30,16 @@
                         <span class="text-second"><i class="bi bi-arrow-up-right"></i> <i class="bi bi-arrow-up-right"></i></span>
                         </span>
                         </button>
-                     </form>
+                     </form> --}}
                   </div>
                </div>
-               <div class="col-lg-4 col-md-4 col-sm-6 mb-5 mb-md-0">
+               <div class="col-lg-4 col-md-4 col-sm-6 mb-5 mb-md-0 order-md-3 order-3">
                   <div class="footer-widget text-md-end">
                      <div class="footer-nav">
                         <ul>
-                           <li class="menu-item"><a href="{{route('aboutUs')}}">Giới Thiệu</a></li>
-                           <li class="menu-item"><a href="{{route('duanTieuBieu')}}">Dịch vụ</a></li>
-                           <li class="menu-item"><a href="{{route('lienHe')}}">Liên Hệ</a></li>
+                           <li class="menu-item"><a href="{{route('aboutUs')}}">About Us</a></li>
+                           <li class="menu-item"><a href="{{route('duanTieuBieu')}}">Services</a></li>
+                           <li class="menu-item"><a href="{{route('lienHe')}}">Contact Us</a></li>
 
                         </ul>
                      </div>
@@ -54,7 +54,7 @@
       <div class="container">
          <div class="footer-bottom-inner">
             <div class="copyright">
-               <p><a href="">Đào Quý Hòa</a> photography, All Rights Reserved</p>
+               <p><a href="">{{$setting->company}}</a> photography, All Rights Reserved</p>
             </div>
             <div class="social-box style-oval">
                <ul>

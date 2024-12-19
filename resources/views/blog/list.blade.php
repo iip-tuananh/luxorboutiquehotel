@@ -1,9 +1,9 @@
 @extends('layouts.main.master')
 @section('title')
-{{$title_page}} 
+{{$title_page}}
 @endsection
 @section('description')
-{{$title_page}} 
+{{$title_page}}
 @endsection
 @section('image')
 {{url(''.$banner[0]->image)}}
@@ -24,16 +24,16 @@
                   <svg width="12" height="10.633">
                      <use href="#svg-home"></use>
                   </svg>
-                  Trang chủ
+                  Home
                </a>
                <span class="slash-divider ml-2 mr-2">/</span>
             </li>
-            <li>Tin tức cập nhật</li>
+            <li>Latest Articles</li>
          </ul>
       </div>
    </div>
    <section class="blog-layout" itemscope="" itemtype="http://schema.org/Blog">
-      <meta itemprop="name" content="Tin tức">
+      <meta itemprop="name" content="Latest Articles">
       <meta itemprop="description" content="
          &nbsp;">
       @foreach ($blogCate as $item)
@@ -61,8 +61,8 @@
                               {{languageName($type->name)}}
                            </a>
                            @endforeach
-                           <a class="border rounded-10 font-weight-bold" href="{{route('listCateBlog',['slug'=>$item->slug])}}" title="Xem tất cả">
-                           Xem tất cả
+                           <a class="border rounded-10 font-weight-bold" href="{{route('listCateBlog',['slug'=>$item->slug])}}" title="View All">
+                           View All
                            </a>
                         </div>
                      </div>
@@ -93,7 +93,7 @@
                            @if ($key > 0 && $key < 6)
                               <article class="blog-item-list clearfix mb-3 row">
                                  <div class="col-4 col-lg-3 pr-0 pl-md-0">
-                                    <a href="{{route('detailBlog',['slug'=>$i->slug])}}" title="{{languageName($i->title)}}" class=" d-block modal-open thumb_img_blog_list thumb rounded" title="{{languageName($i->title)}}"> 
+                                    <a href="{{route('detailBlog',['slug'=>$i->slug])}}" title="{{languageName($i->title)}}" class=" d-block modal-open thumb_img_blog_list thumb rounded" title="{{languageName($i->title)}}">
                                     <span class="modal-open position-relative d-block w-100 m-0 ratio3by2 has-edge aspect zoom">
                                     <img src="{{url('frontend/images/placeholder_1x1.png')}}" data-src="{{$i->image}}" decoding="async" alt="{{languageName($i->title)}}" class="lazy d-block img img-cover position-absolute loaded">
                                     </span>
@@ -116,10 +116,10 @@
           @endif
       @endforeach
       @if (count($blog) > 0)
-      
+
       <div class="container mt-3 mb-3 ">
          <div class="col-main rounded m_white_bg_module p-lg-3 pl-2 pr-2 pt-3 pb-3">
-            <h1 class="blog-name font-weight-bold pb-3 pt-2 pt-lg-0">Bài viết mới</h1>
+            <h1 class="blog-name font-weight-bold pb-3 pt-2 pt-lg-0">Latest Articles</h1>
                 <article>
                   <div class="grid_article">
                      <div class="row">
@@ -148,20 +148,20 @@
                </article>
          </div>
       </div>
-      @else 
+      @else
       <div class="container mt-3 mb-3 lastest-articles">
          <div class="rounded p-3 bg-white">
             <div class="row">
                <div class="col-12">
-                  <p class="text-center alert alert-warning mb-0">Hiện tại danh mục không có bài viết</p>
+                  <p class="text-center alert alert-warning mb-0">Currently, the category does not have any articles</p>
                </div>
             </div>
          </div>
       </div>
       @endif
-      
 
-      
+
+
 
    </section>
 </div>

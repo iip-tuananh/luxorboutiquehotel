@@ -52,7 +52,7 @@
                   <!-- end widget -->
                   <div class="widget widget_block">
                      <div class="wp-block-group__inner-container">
-                        <h2 class="widget-title">Danh Mục Dịch Vụ Nổi Bật</h2>
+                        <h2 class="widget-title">Featured Service Categories</h2>
                         <ul class="wp-block-categories-list wp-block-categories">
                            @foreach ($servicehome as $item)
                            <li class="cat-item"><a href="{{route('serviceList',['slug'=>$item->slug])}}">{{$item->name}}</a> <i class="bi bi-chevron-right"></i></li>
@@ -64,7 +64,7 @@
                   <!-- end widget -->
                   <div class="widget widget_block">
                      <div class="wp-block-group__inner-container">
-                        <h2 class="widget-title">Bài Viết Mới</h2>
+                        <h2 class="widget-title">Latest Articles</h2>
                         <ul class="wp-block-latest-posts__list wp-block-latest-posts">
                            @foreach ($blognew as $item)
                            <li>

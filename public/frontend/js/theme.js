@@ -989,9 +989,9 @@ Description: Kimono - Photography Agency
         // Gallery
         var SwiperGalleryTwo = new Swiper('.swiper-gallery-two', {
             loop: true,
-            autoplay: {
-                delay: 3000,
-            },
+            // autoplay: {
+            //     delay: 3000,
+            // },
             speed: 1500,
             slidesPerView: 1.2,
             spaceBetween: 20,

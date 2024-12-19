@@ -15,14 +15,14 @@
     -ms-transition: all 1s ease;
     -o-transition: all 1s ease;
     -webkit-transition: all 1s ease;
-  }
+}
 
-  #preloader.hide {
+#preloader.hide {
     height: 0%;
     top: -50%;
-  }
+}
 
-  .preloader-inner {
+.preloader-inner {
     position: absolute;
     z-index: 100;
     left: 50%;
@@ -33,35 +33,31 @@
     -ms-transition: all 0.5s ease;
     -o-transition: all 0.5s ease;
     -webkit-transition: all 0.5s ease;
-  }
-  #preloader.hide .preloader-inner {
+}
+
+#preloader.hide .preloader-inner {
     opacity: 0;
     visibility: hidden;
-  }
+}
 
-  /* Spinner Loading */
-  .preloader-inner .spinner {
+.preloader-inner .spinner {
     position: relative;
-    /* animation: spinner 2.5s infinite linear; */
-    /* border-radius: 50%;
-    border: 3px solid var(--color-white);
-    border-top-color: var(--color-one); */
     width: 50%;
     margin: 0 auto 30px auto;
-  }
-  .preloader-inner .spinner img.wheel{
+}
+
+.preloader-inner .spinner img.wheel {
     position: absolute;
-    left: 26%;
+    left: 18%;
     transform: translateX(-50%);
     transform-origin: center;
-    top: 18px;
+    top: 14px;
     animation: spinner 2.5s infinite linear;
     display: inline-block;
-    width: 24px;
-  }
+    width: 30px;
+}
 
-  /* Loading text */
-  .preloader-inner .loading-text {
+.preloader-inner .loading-text {
     font-weight: var(--fw-semibold);
     font-size: 60px;
     line-height: 60px;
@@ -69,15 +65,15 @@
     user-select: none;
     animation: scale1 2.5s infinite linear;
     display: none;
-  }
+}
 
-  .preloader-inner .loading-text .characters {
+.preloader-inner .loading-text .characters {
     position: relative;
     display: inline-block;
     color: rgba(255, 255, 255, 0.2);
-  }
+}
 
-  .preloader-inner .loading-text .characters:before {
+.preloader-inner .loading-text .characters:before {
     content: attr(data-preloader-text);
     position: absolute;
     left: 0;
@@ -86,84 +82,71 @@
     transform: rotateY(-90deg);
     color: white;
     animation: characters 4s infinite;
-  }
+}
 
-  .preloader-inner .loading-text .characters:nth-child(2):before {
+.preloader-inner .loading-text .characters:nth-child(2):before {
     animation-delay: 0.2s;
-  }
+}
 
-  .preloader-inner .loading-text .characters:nth-child(3):before {
+.preloader-inner .loading-text .characters:nth-child(3):before {
     animation-delay: 0.4s;
-  }
+}
 
-  .preloader-inner .loading-text .characters:nth-child(4):before {
+.preloader-inner .loading-text .characters:nth-child(4):before {
     animation-delay: 0.6s;
-  }
+}
 
-  .preloader-inner .loading-text .characters:nth-child(5):before {
+.preloader-inner .loading-text .characters:nth-child(5):before {
     animation-delay: 0.8s;
-  }
+}
 
-  .preloader-inner .loading-text .characters:nth-child(6):before {
+.preloader-inner .loading-text .characters:nth-child(6):before {
     animation-delay: 1s;
-  }
+}
 
-  .preloader-inner .loading-text .characters:nth-child(7):before {
+.preloader-inner .loading-text .characters:nth-child(7):before {
     animation-delay: 1.2s;
-  }
-  @media screen and (max-width: 991.9px) {
+}
+
+@media screen and (max-width: 991.9px) {
     .preloader-inner .spinner img.wheel {
+        left: 26%;
+        top: 16px;
+        width: 26px;
+    }
+}
 
-      left: 26%;
-
-      top: 16px;
-
-      width: 26px;
-  }
-  }
-  /* Animation of the preloader */
-  @keyframes spinner {
+@keyframes spinner {
     to {
-      transform: translateX(-50%) rotateZ(360deg);
+        transform: translateX(-50%) rotateZ(360deg);
     }
-  }
+}
 
-  /* Animation of letters loading from the preloader */
-  @keyframes characters {
-    0%,
-    75%,
-    100% {
-      opacity: 0;
-      transform: rotateY(-90deg);
+@keyframes characters {
+    0%, 75%, 100% {
+        opacity: 0;
+        transform: rotateY(-90deg);
     }
-    25%,
-    50% {
-      opacity: 1;
-      transform: rotateY(0deg);
-    }
-  }
 
-  @keyframes scale1 {
+    25%, 50% {
+        opacity: 1;
+        transform: rotateY(0deg);
+    }
+}
+
+@keyframes scale1 {
     0% {
         transform: scale(1);
         opacity: 1;
     }
+
     50% {
         transform: scale(0.8);
         opacity: 0;
     }
-    100% {
-      transform: scale(1);
-      opacity: 1;
-    }
-  }
 
-  /* #preloader .dark-image {
-    display: none;
-  }
-  .theme-style--light #preloader .light-image {
-    display: none;
-  }
-  .theme-style--light #preloader .dark-image {
-    display: block;
-  } */
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}

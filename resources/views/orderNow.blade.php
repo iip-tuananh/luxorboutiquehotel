@@ -171,9 +171,6 @@
             top: 15px;
         }
     }
-    .blog-details.blog-details-box {
-        padding: 0 100px;
-    }
 </style>
 @endsection
 @section('content')
@@ -187,7 +184,7 @@
                     </div>
                     <div class="container">
                         <h4>Enjoy your time in our Hotel with pleasure.</h4>
-                        <h1 class="wptb-item--title ">Đặt phòng</h1>
+                        <h1 class="wptb-item--title ">Booking A Room</h1>
                     </div>
                     <div class="overlay"></div>
                     <div class="hero-section-scroll">
@@ -222,9 +219,51 @@
                                     src="//book.securebookings.net/widgetCustomize?lang=en&widgetType=Widget&id=5492ea90-15a0-1732871736-4060-9f95-a486922f3417&ajax=true">
                                 </script>
 
+                                <style>
+                                    #hbe-bws-page {
+                                        padding: 0 !important;
+                                        font-family: 'Lora', serif !important;
+                                        font-size: 16px !important;
+                                    }
+                                    #hbe-bws-page .bws-button {
+                                        background: #d6ad5b !important;
+                                        color: #fff !important;
+                                        font-family: 'Lora', serif !important;
+                                        font-size: 18px !important;
+                                    }
+                                    #hbe-bws-page .room-type-name {
+                                        font-size: 26px !important;
+                                    }
+                                    #hbe-bws-page .bws-details-description {
+                                        font-size: 20px !important;
+                                    }
+                                    #hbe-bws-page .bws-rooms-list {
+                                        padding: 0 !important;
+                                    }
+                                    #hbe-bws-page .bws-rooms-list #hbe-bws-wrapper {
+                                        padding: 0 !important;
+                                    }
+                                    #hbe-bws-wrapper .bws-row .day-stay {
+                                        width: 100% !important;
+                                    }
+                                    #hbe-bws-page #check_in_show, #hbe-bws-page #check_out_show {
+                                        width: 100% !important;
+                                        height: 40px !important;
+                                        font-family: 'Lora', serif !important;
+                                        font-size: 16px !important;
+                                        border-radius: 5px !important;
+                                        border: 1px solid #e0e0e0 !important;
+                                        line-height: 40px !important;
+                                    }
+                                    #hbe-bws-page .bws-ipt-calendar {
+                                        height: 40px !important;
+                                        border-radius: 5px !important;
+                                    }
+                                </style>
+
                                 {{-- *Embedded Code: vietver --}}
 
-                                <div class="hbe-bws">
+                                {{-- <div class="hbe-bws">
                                     <section id="hbe-bws-page">
                                         <div id="hbe-bws-wrapper"> </div>
                                     </section>
@@ -233,7 +272,7 @@
                                 <script type="text/javascript" src="//book.securebookings.net/js/widget.all.js"></script>
                                 <script type="text/javascript"
                                     src="//book.securebookings.net/widgetCustomize?lang=vi&widgetType=Widget&id=5492ea90-15a0-1732871736-4060-9f95-a486922f3417&ajax=true">
-                                </script>
+                                </script> --}}
 
                             </div>
                         </div>

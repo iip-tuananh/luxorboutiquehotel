@@ -163,7 +163,7 @@ class PageController extends Controller
     {
         $data['detail_service'] = Services::where(['slug'=>$slug])->first();
          $data['serviceLq'] = Services::where(['status'=>1])->get();
-        return view('serviceDetail',$data);
+        return view('servicedetail',$data);
     }
     public function serviceList($slug)
     {

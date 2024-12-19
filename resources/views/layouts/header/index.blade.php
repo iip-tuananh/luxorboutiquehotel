@@ -16,13 +16,13 @@
                     <div class="mainnav">
                         <ul class="main-menu">
                             <li class="menu-item ">
-                                <a href="{{ route('home') }}">Trang chủ</a>
+                                <a href="{{ route('home') }}">Home</a>
                             </li>
                             <li class="menu-item ">
-                                <a href="{{ route('aboutUs') }}">Giới thiệu</a>
+                                <a href="{{ route('aboutUs') }}">About Us</a>
                             </li>
                             <li class="menu-item menu-item-has-children">
-                                <a href="#">Phòng</a>
+                                <a href="#">Rooms & Suites</a>
                                 <ul class="sub-menu" data-lenis-prevent>
                                     @foreach ($rooms as $item)
                                         <li class="menu-item"><a
@@ -32,7 +32,7 @@
                                 </ul>
                             </li>
                             <li class="menu-item menu-item-has-children">
-                                <a href="#">Dich vụ</a>
+                                <a href="#">Services</a>
                                 <ul class="sub-menu" data-lenis-prevent>
                                     @foreach ($servicehome as $item)
                                         <li class="menu-item"><a
@@ -43,7 +43,7 @@
                             </li>
 
                             <li class="menu-item menu-item-has-children">
-                                <a href="#">Tin tức</a>
+                                <a href="#">News & Activities</a>
                                 <ul class="sub-menu" data-lenis-prevent>
                                     @foreach ($blogCate as $item)
                                         <li class="menu-item"><a
@@ -53,7 +53,7 @@
                                 </ul>
                             </li>
                             <li class="menu-item">
-                                <a href="{{ route('lienHe') }}">Liên Hệ</a>
+                                <a href="{{ route('lienHe') }}">Contact Us</a>
                             </li>
 
                         </ul>
@@ -89,7 +89,7 @@
     <h6>Menu</h6>
     <div class="mr_navmenu"></div>
     <!-- Keep this div empty. Menu will come here by JavaScript -->
-    <h6>Liên Hệ</h6>
+    <h6>Contact Us</h6>
     <div class="wptb-icon-box1 style2">
         <div class="wptb-item--inner flex-start">
             <div class="wptb-item--icon"><i class="bi bi-envelope"></i></div>
@@ -114,7 +114,7 @@
             </div>
         </div>
     </div>
-    <h6>Mạng Xã Hội</h6>
+    <h6>Social Media</h6>
     <div class="social-box">
         <ul>
             <li><a href="https://www.facebook.com/"><i class="bi bi-facebook"></i></a></li>
@@ -129,7 +129,7 @@
     <button class="aside_close">Đóng <i class="bi bi-x-lg"></i></button>
 
     <div class="aside_info_inner">
-        <h6>// Vui Lòng Nhập Thông Tin</h6>
+        <h6>// Please Enter Your Information</h6>
         <form class="wptb-form" method="post" id="commentform">
             <div class="wptb-form--inner">
                 <div class="row">
@@ -166,7 +166,7 @@
                 </div>
             </div>
         </form>
-        <h6>// Mạng Xã Hội</h6>
+        <h6>// Social Media</h6>
         <div class="social-box style-square">
             <ul>
                 <li><a href="https://www.facebook.com/"><i class="bi bi-facebook"></i></a></li>

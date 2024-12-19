@@ -212,7 +212,7 @@
 
 .header .mainnav ul.main-menu > li.current > a::before, .header .mainnav ul.main-menu > li.active > a::before, .header .mainnav ul.main-menu > li:hover > a::before {
     width: 100%;
-    background-color: rgba(var(--color-white-rgb), 0.8);
+    background-color: rgb(254 251 255);
 }
 
 .header .mainnav ul.main-menu li ul {
@@ -1080,7 +1080,7 @@ body.overlay_menu_active .wptb-overlay-contact {
 }
 
 .header.color-fixed.sticky {
-    background-color: var(--color-black-fixed-rgb);
+    background-color: rgb(66 23 11 / 88%);
 }
 
 .header.color-fixed .mainnav ul.main-menu > li > a, .header.color-fixed .mr_menu_toggle, .header.color-fixed .modal_search_icon, .header.color-fixed .overlay_menu_toggle {
@@ -1088,7 +1088,7 @@ body.overlay_menu_active .wptb-overlay-contact {
 }
 
 .header.color-fixed .mainnav ul.main-menu > li.active > a::before {
-    background-color: linear-gradient(to right, #e5c06a, #ecd490);
+    background-color: var(--color-white-fixed);
 }
 
 .header.color-fixed .aside_open span {

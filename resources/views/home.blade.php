@@ -15,77 +15,75 @@
 @section('content')
     <main class="wrapper">
         <!-- Slider Section -->
-        <section class="wptb-slider style3">
-            <div class="swiper-container wptb-swiper-slider-three">
+        <section class="wptb-slider style2">
+            <div class="swiper-container wptb-swiper-slider-two">
                 <!-- swiper slides -->
                 <div class="swiper-wrapper">
                     <!-- Slide Item -->
                     @foreach ($banner as $item)
                         <div class="swiper-slide">
-                            <div class="wptb-slider--item">
+                            <div class="wptb-slider--item" data-overlay-dark="2">
                                 <div class="wptb-slider--image" style="background-image: url('{{ $item->image }}');"></div>
                                 <div class="wptb-slider--inner">
-                                    <div class="wptb-item--inner">
-                                        <div class="container">
-                                            <div class="row">
-                                                <div class="col-lg-7">
-                                                    <div class="wptb-heading">
-                                                        <h6 class="wptb-item--subtitle">Đào Quý Hòa</h6>
-                                                        <h1 class="wptb-item--title">{{ $item->title }}</h1>
-                                                        <p class="wptb-item--description">{{ $item->description }}</p>
-                                                        <div class="wptb-item--button">
-                                                            <a class="btn btn-two white" href="{{ route('aboutUs') }}">
-                                                                <span class="btn-wrap">
-                                                                    <span class="text-first">Về Tôi</span>
-                                                                    <span class="text-second"> <i
-                                                                            class="bi bi-arrow-up-right"></i> <i
-                                                                            class="bi bi-arrow-up-right"></i> </span>
-                                                                </span>
-                                                            </a>
-                                                            <a class="btn btn-two white-opacity creative"
-                                                                href="{{ $item->link }}">
-                                                                <span class="btn-wrap">
-                                                                    <span class="text-first">Xem Dự Án</span>
-                                                                    <span class="text-second"> <i
-                                                                            class="bi bi-arrow-up-right"></i> <i
-                                                                            class="bi bi-arrow-up-right"></i> </span>
-                                                                </span>
-                                                            </a>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
+                                    <!-- Layer Image -->
+                                    <div class="wptb-item-layer wptb-item-layer-one">
+                                        <img src="{{ url('frontend/img/layer-3.png') }}" alt="img">
                                     </div>
-                                </div>
-                                <!-- Layer Image -->
-                                <div class="wptb-item-layer wptb-item-layer-one">
-                                    <img src="{{ url('frontend/img/layer-4.png') }}" alt="img">
-                                </div>
-                                <!-- Layer Image -->
-                                <div class="wptb-item-layer wptb-item-layer-two">
-                                    <img src="{{ url('frontend/img/layer-5.png') }}" alt="img">
+                                    <div class="wptb-heading">
+                                        <div class="wptb-item--inner mb-3">
+                                        <h6 class="wptb-item--subtitle">{{ $item->title }}</h6>
+                                            <h1 class="wptb-item--title">{{ $item->description }}</h1>
+
+
+                                        </div>
+                                        <a class="btn btn-two creative" href="{{ $item->link }}">
+                                        <span class="btn-wrap">
+                                            <span class="text-first text-white">View Detail</span>
+                                            <span class="text-second"> <i class="bi bi-arrow-up-right text-white"></i> <i class="bi bi-arrow-up-right text-white"></i> </span>
+                                        </span>
+                                    </a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     @endforeach
-
                     <!-- End Slide Item -->
-
                 </div>
             </div>
+
+            <!-- Left Pane -->
+            <div class="wptb-left-pane justify-content-center">
+                <div class="logo">
+                    <h6>Our Room</h6>
+                </div>
+            </div>
+
+            <!-- Right Pane -->
+            <div class="wptb-right-pane">
+                <div class="social-box style-oval">
+                    <ul>
+                        <li><a href="https://www.facebook.com/">FB</a></li>
+                        <li><a href="https://www.instagram.com/">IG</a></li>
+                        <li><a href="https://www.youtube.com/">YT</a></li>
+                        <li><a href="https://www.dribbble.com/">DR</a></li>
+                    </ul>
+                </div>
+            </div>
+
             <!-- Bottom Pane -->
             <div class="wptb-bottom-pane justify-content-center">
                 <!-- pagination dots -->
                 <div class="wptb-swiper-dots style2">
                     <div class="swiper-pagination"></div>
                 </div>
+
                 <!-- Swiper Navigation -->
                 <div class="wptb-swiper-navigation style3">
                     <div class="wptb-swiper-arrow swiper-button-prev"></div>
                     <div class="wptb-swiper-arrow swiper-button-next"></div>
                 </div>
             </div>
+
         </section>
 
         {{-- Search tour --}}
@@ -97,13 +95,56 @@
             src="//book.securebookings.net/searchWidgetCustomize?lang=en&id=5492ea90-15a0-1732871736-4060-9f95-a486922f3417&ajax=true">
         </script>
 
+        <style>
+            #hbe-bws-wrapper-widget-code {
+                text-align: center !important;
+                padding-top: 0 !important;
+                padding-bottom: 0 !important;
+            }
+            #search-widget-panel .swp-horizontal .bws-swp-col {
+                width: 300px !important;
+            }
+            #search-widget-panel .swp-horizontal .swp-col3{
+                width: 100px !important;
+            }
+            #search-widget-panel .bws-ipt-calendar {
+                width: 100% !important;
+                height: 40px !important;
+                font-family: 'Lora', serif !important;
+                font-size: 16px !important;
+                border-radius: 5px !important;
+                border: 1px solid #e0e0e0 !important;
+            }
+            #search-widget-panel .bws-ipt-calendar .show-date {
+                line-height: 40px !important;
+                font-size: 16px !important;
+            }
+            #search-widget-panel .bws-button {
+                font-size: 18px !important;
+                font-family: 'Lora', serif !important;
+            }
+            div#search-widget-panel div.swp-col3 a#bws-button-search {
+                background-color: #b37b2e !important;
+                padding: 8px 20px !important;
+            }
+            div#search-widget-panel {
+                padding: 42px 0px !important;
+            }
+
+            @media (max-width: 768px) {
+                .hbe-bws .clearfix {
+                    padding: 0 20px 0 40px;
+                }
+            }
+        </style>
+
         {{-- *Search Widget Code: vietver --}}
-        <section id="hbe-bws-wrapper-widget-code"></section>
+        {{-- <section id="hbe-bws-wrapper-widget-code"></section>
         <link type="text/css" rel="stylesheet" href="//book.securebookings.net/css/search-wdg.css" />
         <script type="text/javascript" src="//book.securebookings.net/js/widget.search.js"></script>
         <script type="text/javascript"
             src="//book.securebookings.net/searchWidgetCustomize?lang=vi&id=5492ea90-15a0-1732871736-4060-9f95-a486922f3417&ajax=true">
-        </script>
+        </script> --}}
         {{-- end search --}}
 
         <section class="wptb-about-two bg-transparent">
@@ -113,13 +154,13 @@
                         <div class="row align-items-center">
                             <div class="col-lg-7">
                                 <h6 class="wptb-item--subtitle"><span>01 //</span> About Us </h6>
-                                <h1 class="wptb-item--title">Về Chúng Tôi</h1>
+                                <h1 class="wptb-item--title">{{$setting->company}}</h1>
                             </div>
                             <div class="col-lg-5 text-lg-end">
                                 <div class="wptb-item--button">
-                                    <a href="" class="aside_open_button btn btn-two creative text-uppercase">
+                                    <a href="{{route('orderNow')}}" class="btn btn-two creative text-uppercase">
                                         <span class="btn-wrap">
-                                            <span class="text-first">Đặt Lịch Tư Vấn</span>
+                                            <span class="text-first">Booking Now</span>
                                             <span class="text-second"><i class="bi bi-arrow-up-right"></i></span>
                                         </span>
                                     </a>
@@ -160,7 +201,7 @@
                             </div>
                             <a class="btn btn-two white-opacity creative" href="{{ route('aboutUs') }}">
                                 <span class="btn-wrap">
-                                    <span class="text-first">Xem Thêm</span>
+                                    <span class="text-first">View More</span>
                                     <span class="text-second"> <i class="bi bi-arrow-up-right"></i> <i
                                             class="bi bi-arrow-up-right"></i> </span>
                                 </span>
@@ -176,8 +217,8 @@
             <div class="container-fluid">
                 <div class="wptb-heading mb-0">
                     <div class="wptb-item--inner text-center">
-                        <h6 class="wptb-item--subtitle"><span>02 //</span> Projects</h6>
-                        <h1 class="wptb-item--title lg">Phòng Khách Sạn</h1>
+                        <h6 class="wptb-item--subtitle"><span>02 //</span> View Rooms</h6>
+                        <h1 class="wptb-item--title lg">Rooms & Suites</h1>
                     </div>
                 </div>
                 <div class="swiper-container swiper-gallery-two has-radius">
@@ -191,7 +232,7 @@
                                 <div class="grid-item">
                                     <div class="wptb-item--inner ">
                                         <div class="wptb-item--image">
-                                            <img src="{{ $imgduan[0] }}" alt="img">
+                                            <img src="{{ $imgduan[0] }}" alt="img" style="height: 324px !important;">
                                         </div>
                                         <div class="wptb-item--holder">
                                             <div class="wptb-item--meta">
@@ -199,8 +240,7 @@
                                                         href="{{ route('roomDetail', ['slug' => $item->slug]) }}">{{ $item->name }}</a>
                                                 </h4>
                                                 <ul class="option_project">
-                                                    <li class=""><b
-                                                            class="proce">{{ number_format($item->price) }}đ</b></li><br>
+                                                    <li class=""><b class="proce">{{ number_format($item->price) }}đ</b></li><br>
                                                     <li>{{ $item->wc }} Người |</li>
                                                     <li>{{ $item->phongngu }} |</li>
                                                     <li>{{ $item->dientich }}</li>
@@ -239,12 +279,11 @@
                         <div class="row align-items-center">
                             <div class="col-lg-6">
                                 <h6 class="wptb-item--subtitle"><span>02 //</span> Services</h6>
-                                <h1 class="wptb-item--title">Dịch Vụ Của Chúng Tôi
+                                <h1 class="wptb-item--title">Our Service
                                 </h1>
                             </div>
                             <div class="col-lg-6">
-                                <p class="wptb-item--description">Với phương châm "Niềm tin là giá trị cốt lõi", tôi luôn
-                                    cam kết mang lại sự hài lòng và an tâm tuyệt đối cho khách hàng.
+                                <p class="wptb-item--description">Luxor Boutique Hotel offers a comprehensive range of services designed to provide guests with a luxurious and convenient experience. Here's an overview of what you can expect:
                                 </p>
                             </div>
                         </div>
@@ -256,18 +295,21 @@
                             $img_ser = json_decode($item->images);
                         @endphp
                         <!-- Iconbox -->
-                        <div class="col-lg-3 col-md-6 col-sm-6 wow fadeInLeft">
-                            <a
-                                href="{{ route('serviceDetail', ['cate' => $item->cateService->slug, 'slug' => $item->slug]) }}">
+                        <div class="col-lg-4 col-md-6 col-sm-6 wow fadeInLeft">
+                            {{-- <a href="{{ route('serviceDetail', ['cate' => $item->cateService->slug, 'slug' => $item->slug]) }}"> --}}
                                 <div class="wptb-icon-box5 mb-3">
                                     <div class="wptb-item--inner">
-                                        <div class="wptb-item--icon">
-                                            <img src="{{ $img_ser[0] }}" alt="img" class="default-icon">
-                                            <img src="{{ $img_ser[0] }}" alt="img" class="hover-icon">
-                                        </div>
+                                        <a href="{{ route('serviceDetail', ['cate' => $item->cateService->slug, 'slug' => $item->slug]) }}">
+                                            <div class="wptb-item--icon">
+                                                <img src="{{ $img_ser[0] }}" alt="img" class="default-icon">
+                                                <img src="{{ $img_ser[0] }}" alt="img" class="hover-icon">
+                                            </div>
+                                        </a>
                                         <div class="wptb-item--holder">
                                             <p class="wptb-item--description">0{{ $key + 1 }}</p>
-                                            <h4 class="wptb-item--title mb-0">{{ $item->name }}</h4>
+                                            <h4 class="wptb-item--title mb-0">
+                                                <a href="{{ route('serviceDetail', ['cate' => $item->cateService->slug, 'slug' => $item->slug]) }}">{{ $item->name }}</a>
+                                            </h4>
                                             <div class="line_3">
                                                 <p>{{ languageName($item->description) }}</p>
                                             </div>
@@ -275,7 +317,7 @@
                                         </div>
                                     </div>
                                 </div>
-                            </a>
+                            {{-- </a> --}}
 
                         </div>
                     @endforeach
@@ -357,12 +399,11 @@
                         <div class="row align-items-center">
                             <div class="col-lg-6">
                                 <h6 class="wptb-item--subtitle"><span>05 //</span> Blog</h6>
-                                <h1 class="wptb-item--title mb-0">Tin Tức & Hoạt Động<br>
+                                <h1 class="wptb-item--title mb-0">News & Activities<br>
                                 </h1>
                             </div>
                             <div class="col-lg-6">
-                                <p class="wptb-item--description">Tôi sẽ luôn cập nhật các hoạt động mới nhất trong thị
-                                    trường bds trong nước
+                                <p class="wptb-item--description">I will always update the latest activities to perfect products for customers
                                 </p>
                             </div>
                         </div>
@@ -408,7 +449,7 @@
                 <img src="{{ url('frontend/img/texture-2-light.png') }}" alt="texture-2-light.png">
             </div>
             <div class="container">
-                <div class="wptb-form--wrapper">
+                {{-- <div class="wptb-form--wrapper">
                     <div class="wptb-heading">
                         <div class="wptb-item--inner text-center">
                             <h1 class="wptb-item--title"> Yêu Cầu Tư Vấn</h1>
@@ -458,7 +499,7 @@
                             </form>
                         </div>
                     </div>
-                </div>
+                </div> --}}
                 <div class="wptb-office-address mr-top-100">
                     <div class="row">
                         <div class="col-lg-4 col-md-6">
@@ -468,7 +509,7 @@
                                     <div class="wptb-item--holder">
                                         <h3 class="wptb-item--title">Hotline</h3>
                                         <p class="wptb-item--description">{{ $setting->phone1 }}</p>
-                                        <a href="tel:{{ $setting->phone1 }}" class="wptb-item--link">Gọi Ngay</a>
+                                        <a href="tel:{{ $setting->phone1 }}" class="wptb-item--link">Call Now</a>
                                     </div>
                                 </div>
                             </div>
@@ -480,7 +521,7 @@
                                     <div class="wptb-item--holder">
                                         <h3 class="wptb-item--title">Email</h3>
                                         <p class="wptb-item--description">{{ $setting->email }}</p>
-                                        <a href="mailto:{{ $setting->email }}" class="wptb-item--link">Gửi Mail</a>
+                                        <a href="mailto:{{ $setting->email }}" class="wptb-item--link">Send Email</a>
                                     </div>
                                 </div>
                             </div>
@@ -491,9 +532,9 @@
                                     <div class="wptb-item--icon">Z</div>
                                     <div class="wptb-item--holder">
                                         <h3 class="wptb-item--title">Zalo</h3>
-                                        <p class="wptb-item--description">Đào Quý Hòa</p>
+                                        <p class="wptb-item--description"></p>
                                         <a target="_blank" href="https://zalo.me/{{ $setting->phone1 }}"
-                                            class="wptb-item--link">Nhắn tin</a>
+                                            class="wptb-item--link">Send Message</a>
                                     </div>
                                 </div>
                             </div>
@@ -505,8 +546,8 @@
                                     <div class="wptb-item--holder">
                                         <h3 class="wptb-item--title">Youtube</h3>
                                         <p class="wptb-item--description">{{ $setting->google }}</p>
-                                        <a target="_blank" href="{{ $setting->google }}" class="wptb-item--link">Xem
-                                            Kênh</a>
+                                        <a target="_blank" href="{{ $setting->google }}" class="wptb-item--link">View
+                                            Channel</a>
                                     </div>
                                 </div>
                             </div>
@@ -518,8 +559,8 @@
                                     <div class="wptb-item--holder">
                                         <h3 class="wptb-item--title">Facebook</h3>
                                         <p class="wptb-item--description">{{ $setting->facebook }}</p>
-                                        <a target="_blank" href="{{ $setting->facebook }}" class="wptb-item--link">Truy
-                                            Cập</a>
+                                        <a target="_blank" href="{{ $setting->facebook }}" class="wptb-item--link">Visit
+                                            Page</a>
                                     </div>
                                 </div>
                             </div>
@@ -529,9 +570,9 @@
                                 <div class="wptb-item--inner flex-start">
                                     <div class="wptb-item--icon"><i class="bi bi-geo-alt"></i></div>
                                     <div class="wptb-item--holder">
-                                        <h3 class="wptb-item--title">Địa chỉ</h3>
-                                        <p style="font-size: 12px" class="wptb-item--description">
-                                            {{ $setting->address1 }}</p>
+                                        <h3 class="wptb-item--title">Address</h3>
+                                        <a target="_blank" href="https://maps.app.goo.gl/RbxLcX4hv5CqZALo9" class="wptb-item--link">View
+                                            Address</a>
                                     </div>
                                 </div>
                             </div>

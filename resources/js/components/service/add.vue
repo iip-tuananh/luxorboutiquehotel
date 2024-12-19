@@ -10,7 +10,7 @@
               <vs-input
                 type="text"
                 size="default"
-                placeholder="Tên bài viết"
+                placeholder="Tên phòng"
                 class="w-100"
                 v-model="objData.name"
               />
