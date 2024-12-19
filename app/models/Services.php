@@ -14,14 +14,14 @@ class Services extends Model
     public function saveServices($request)
     {
     	$id = $request->id;
-        $cate = ServiceCate::where([
-            'id' => $request->cate_id
-            ])->first();
+        // $cate = ServiceCate::where([
+        //     'id' => $request->cate_id
+        //     ])->first();
         if($id != ""){
             $query = Services::where([
                 'id' => $id
              ])->first();
-            
+
             if ($query) {
                 $query->name = $request->name;
                 $query->dientich = $request->dientich;
@@ -34,8 +34,7 @@ class Services extends Model
                 $query->status = $request->status;
                 $query->status_home = $request->status_home;
                 $query->image = json_encode($request->image);
-                $query->cate_id = $request->cate_id;
-                $query->cate_slug = $cate->slug;
+                $query->cate_id = $request->cate_id ?? 0;
                 $query->save();
             }else{
                 $query = new Services();
@@ -50,11 +49,10 @@ class Services extends Model
                 $query->status = $request->status;
                 $query->status_home = $request->status_home;
                 $query->image = json_encode($request->image);
-                $query->cate_id = $request->cate_id;
-                $query->cate_slug = $cate->slug;
+                $query->cate_id = $request->cate_id ?? 0;
                 $query->save();
             }
-            
+
         }else{
                 $query = new Services();
                 $query->name = $request->name;
@@ -68,10 +66,9 @@ class Services extends Model
                 $query->status = $request->status;
                 $query->status_home = $request->status_home;
                 $query->image = json_encode($request->image);
-                $query->cate_id = $request->cate_id;
-                $query->cate_slug = $cate->slug;
+                $query->cate_id = $request->cate_id ?? 0;
                 $query->save();
-            
+
         }
         return $query;
     }
