@@ -584,9 +584,7 @@
     </main>
     <style>
         @media (max-width: 768px) {
-            .hidden-xs {
-                display: none;
-            }
+            
             .wptb-icon-box1 .wptb-item--icon {
                 height: 40px;
                 width: 40px;

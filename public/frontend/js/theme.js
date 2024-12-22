@@ -64,6 +64,11 @@ Description: Kimono - Photography Agency
             e.stopPropagation();
             e.preventDefault();
         });
+        $('.mr_menu_toggle_mobile').on('click', function(e) {
+            $('body').addClass('mr_menu_active');
+            e.stopPropagation();
+            e.preventDefault();
+        });
         $('.mr_menu_close').on('click', function(e) {
             $('body').removeClass('mr_menu_active');
             e.stopPropagation();

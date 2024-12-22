@@ -79,8 +79,8 @@
         }
 
         .c-book-expand {
-            width: 78px;
-            height: 78px;
+            width: 140px;
+            height: 50px;
             border: none;
             background-color: #b37a2d;
             position: fixed;
@@ -92,8 +92,8 @@
             cursor: pointer;
             padding: 0;
             overflow: hidden;
-            -webkit-transform: rotate(45deg);
-            transform: rotate(45deg);
+            /* -webkit-transform: rotate(45deg); */
+            /* transform: rotate(45deg); */
         }
 
         a.c-book-expand:hover {
@@ -106,22 +106,22 @@
                 width: 70px;
                 height: 70px;
                 font-size: 14px;
-                padding-top: 18px;
+                padding-top: 16px;
             }
         }
 
         .c-book-expand span {
             display: block;
-            width: 71px;
+            width: 140px;
             height: 50px;
             font-size: 16px;
             padding-top: 14px;
-            padding-right: 17px;
+            /* padding-right: 17px; */
             text-transform: uppercase;
             line-height: normal;
             text-align: center;
-            -webkit-transform: rotate(-45deg);
-            transform: rotate(-45deg);
+            /* -webkit-transform: rotate(-45deg); */
+            /* transform: rotate(-45deg); */
             color: #fff;
         }
 
@@ -201,6 +201,11 @@
             position: revert !important;
             top: 0px !important;
         }
+        @media (max-width: 768px) {
+            .hidden-xs {
+                display: none;
+            }
+        }
     </style>
 </head>
 
@@ -233,45 +238,86 @@
     </script>
     <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit">
     </script>
-    <div onclick="window.location.href= 'tel:0338999639'" class="hotline-phone-ring-wrap">
-        <div class="hotline-phone-ring">
-            <div class="hotline-phone-ring-circle"></div>
-            <div class="hotline-phone-ring-circle-fill"></div>
-            <div class="hotline-phone-ring-img-circle">
-                <a href="tel:0338999639" class="pps-btn-img">
-                    <img src="{{ url('frontend/img/phone.png') }}" alt="Gọi điện thoại" width="50" loading="lazy">
+    <div class="hidden-xs">
+        <div onclick="window.location.href= 'tel:{{ $setting->phone1 }}'" class="hotline-phone-ring-wrap">
+            <div class="hotline-phone-ring">
+                <div class="hotline-phone-ring-circle"></div>
+                <div class="hotline-phone-ring-circle-fill"></div>
+                <div class="hotline-phone-ring-img-circle">
+                    <a href="tel:{{ $setting->phone1 }}" class="pps-btn-img">
+                        <img src="{{ url('frontend/img/phone.png') }}" alt="Gọi điện thoại" width="50" loading="lazy">
+                    </a>
+                </div>
+            </div>
+            <a href="tel:{{ $setting->phone1 }}">
+            </a>
+            <div class="hotline-bar"><a href="tel:{{ $setting->phone1 }}">
+                </a><a href="tel:{{ $setting->phone1 }}">
+                    <span class="text-hotline">{{ $setting->phone1 }}</span>
                 </a>
             </div>
+
         </div>
-        <a href="tel:0338999639">
-        </a>
-        <div class="hotline-bar"><a href="tel:0338999639">
-            </a><a href="tel:0338999639">
-                <span class="text-hotline">0338999639</span>
+        <div class="inner-fabs">
+            <a target="blank" href="" class="fabs roundCool" id="challenges-fab"
+                data-tooltip="Send Messenger">
+                <img class="inner-fab-icon" src="{{ url('frontend/img/messenger-icon.png') }}" alt="challenges-icon"
+                    border="0" loading="lazy">
+            </a>
+            <a target="blank" href="https://zalo.me/{{ $setting->phone1 }}" class="fabs roundCool" id="chat-fab"
+                data-tooltip="Send message Zalo">
+                <img class="inner-fab-icon" src="{{ url('frontend/img/zalo.png') }}" alt="chat-active-icon"
+                    border="0" loading="lazy">
+            </a>
+            <a target="blank" href="https://maps.app.goo.gl/RbxLcX4hv5CqZALo9" class="fabs roundCool" id="chat-fab"
+                data-tooltip="View map">
+                <img class="inner-fab-icon" src="{{ url('frontend/img/map.png') }}" alt="chat-active-icon"
+                    border="0" loading="lazy">
+            </a>
+
+        </div>
+        <div class="fabs roundCool call-animation" id="main-fab">
+            <img class="img-circle" src="{{ url('frontend/img/lienhe.png') }}" alt="" width="135" loading="lazy">
+        </div>
+    </div>
+    <div id="azt-contact-footer-outer" class="hidden-lg">
+        <div id="azt-contact-footer">
+            <a href="#" class="mr_menu_toggle_mobile">
+                <span>
+                    <img src="{{ url('frontend/img/menu.png') }}" alt="menu">
+                    <span class="azt-contact-footer-btn-label">Menu</span>
+                </span>
+            </a>
+            <a href="https://maps.app.goo.gl/RbxLcX4hv5CqZALo9">
+                <span>
+                    <img src="{{ url('frontend/img/map.png') }}" alt="Map">
+                    <span class="azt-contact-footer-btn-label">Map</span>
+                </span>
+            </a>
+            <a id="azt-contact-footer-btn-center" href="tel:{{ $setting->phone1 }}">
+                <span class="azt-contact-footer-btn-center-icon">
+                    <span class="phone-vr-circle-fill"></span>
+                    <img src="{{ url('frontend/img/phone.png') }}" alt="Call Now">
+                </span>
+                <span>
+                    <span class="azt-contact-footer-btn-label">
+                        <span>Call Now</span>
+                    </span>
+                </span>
+            </a>
+            <a href="https://facebook.com/" target="_blank">
+                <span>
+                    <img src="{{ url('frontend/img/messenger-icon.png') }}" alt="Messenger">
+                    <span class="azt-contact-footer-btn-label">Messenger</span>
+                </span>
+            </a>
+            <a href="https://zalo.me/{{ $setting->phone1 }}" target="_blank">
+                <span>
+                    <img class="zalo-icon" src="{{ url('frontend/img/zalo.png') }}" alt="Zalo">
+                    <span class="azt-contact-footer-btn-label">Zalo</span>
+                </span>
             </a>
         </div>
-
-    </div>
-    <div class="inner-fabs">
-        <a target="blank" href="" class="fabs roundCool" id="challenges-fab"
-            data-tooltip="Send Messenger">
-            <img class="inner-fab-icon" src="{{ url('frontend/img/messenger-icon.png') }}" alt="challenges-icon"
-                border="0" loading="lazy">
-        </a>
-        <a target="blank" href="https://zalo.me/0338999639" class="fabs roundCool" id="chat-fab"
-            data-tooltip="Send message Zalo">
-            <img class="inner-fab-icon" src="{{ url('frontend/img/zalo.png') }}" alt="chat-active-icon"
-                border="0" loading="lazy">
-        </a>
-        <a target="blank" href="https://maps.app.goo.gl/RbxLcX4hv5CqZALo9" class="fabs roundCool" id="chat-fab"
-            data-tooltip="View map">
-            <img class="inner-fab-icon" src="{{ url('frontend/img/map.png') }}" alt="chat-active-icon"
-                border="0" loading="lazy">
-        </a>
-
-    </div>
-    <div class="fabs roundCool call-animation" id="main-fab">
-        <img class="img-circle" src="{{ url('frontend/img/lienhe.png') }}" alt="" width="135" loading="lazy">
     </div>
     <div class="totop">
         <a href="#"><i class="bi bi-chevron-up"></i></a>
