@@ -138,15 +138,6 @@
             }
         </style>
 
-        {{-- *Search Widget Code: vietver --}}
-        {{-- <section id="hbe-bws-wrapper-widget-code"></section>
-        <link type="text/css" rel="stylesheet" href="//book.securebookings.net/css/search-wdg.css" />
-        <script type="text/javascript" src="//book.securebookings.net/js/widget.search.js"></script>
-        <script type="text/javascript"
-            src="//book.securebookings.net/searchWidgetCustomize?lang=vi&id=5492ea90-15a0-1732871736-4060-9f95-a486922f3417&ajax=true">
-        </script> --}}
-        {{-- end search --}}
-
         <section class="wptb-about-two bg-transparent">
             <div class="container">
                 <div class="wptb-heading">
@@ -177,7 +168,7 @@
                                     <img src="{{ json_decode($gioithieu->image)[0] }}" alt="img" loading="lazy">
                                     <div class="wptb-item--video-button">
                                         <a class="btn" data-fancybox=""
-                                            href="https://www.youtube.com/watch?v=GF_rBXxoHvE">
+                                            href="{{$video ? $video->link : ''}}">
                                             <span class="text-second"> <i class="bi bi-play-fill"></i> </span>
                                             <span class="line-video-animation line-video-1"></span>
                                             <span class="line-video-animation line-video-2"></span>
@@ -584,7 +575,7 @@
     </main>
     <style>
         @media (max-width: 768px) {
-            
+
             .wptb-icon-box1 .wptb-item--icon {
                 height: 40px;
                 width: 40px;

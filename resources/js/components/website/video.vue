@@ -5,7 +5,7 @@
         <div class="col-md-12 grid-margin stretch-card">
           <div class="card">
             <div class="card-body" >
-              <div class="row" v-for="(item, key) in objData">
+              <div class="row" v-for="(item, key) in objData" :key="key">
                 <div class="col-md-3">
                   <div class="form-group">
                     <image-upload type="avatar" v-model="item.image" :title="'video-'"></image-upload>
@@ -47,7 +47,7 @@
                 <hr style="border: 0.5px solid #04040426; width: 100%;">
               </div>
               <vs-button color="primary" @click="saveVideos">Lưu</vs-button>
-              <vs-button color="success" @click="addObjPartner">Thêm ảnh</vs-button>
+              <!-- <vs-button color="success" @click="addObjPartner">Thêm ảnh</vs-button> -->
             </div>
           </div>
         </div>
@@ -71,7 +71,7 @@ export default {
           status:"",
           link:""
         }
-      ] 
+      ]
     };
   },
   components: {},
@@ -116,7 +116,7 @@ export default {
             }
           ]
         }
-        
+
       }).catch(error => {
         this.loadings(false);;
       })

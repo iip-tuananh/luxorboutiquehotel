@@ -28,6 +28,7 @@ class HomeController extends Controller
         $data['gioithieu'] = PageContent::where(['slug'=>'gioi-thieu','language'=>'vi'])->first(['id','title','content','image','description']);
         $data['duan'] = Services::where(['status'=>1,'status_home'=>1])->get();
         $data['ReviewCus'] = ReviewCus::where(['status'=>1])->get();
+        $data['video'] = Video::where(['status'=>1])->first();
         $data['Partner'] = Partner::where(['status'=>1])->get();
         $data['dichvu'] = Project::where('status',1)->orderBy('id','DESC')->get();
         $data['homePro'] = Product::where(['status'=>1,'discountStatus'=>1])
