@@ -25,7 +25,7 @@ Route::get('/crm', function () {
 //     return view('app');
 // });
 Route::get('/','HomeController@home')->name('home')->middleware(checkLanguage::class);
-// Route::post('/','HomeController@postHome')->name('postHome');
+Route::post('/','HomeController@postHome')->name('postHome');
 Route::group(['namespace'=>'Client','middleware' => ['checkLanguage']], function(){
     Route::get('get-variant.html','ProductController@getSku')->name('getSku');
     Route::get('type-product/{id}','PageController@typeproduct');
@@ -71,6 +71,7 @@ Route::group(['namespace'=>'Client','middleware' => ['checkLanguage']], function
     Route::get('khuyen-mai/{slug}.html','PageController@detailKhuyenmai')->name('detailKhuyenmai');
 
     Route::get('dat-phong.html','PageController@orderNow')->name('orderNow');
+    Route::post('dat-phong.html','PageController@submitOrder')->name('submitOrder');
     Route::get('menu.html','PageController@menu')->name('menu');
     Route::get('account/orders','AuthController@accoungOrder')->name('accoungOrder')->middleware('CheckAuthClient::class');
     Route::get('account/orders/{billid}','AuthController@accoungOrderDetail')->name('accoungOrderDetail')->middleware('CheckAuthClient::class');
