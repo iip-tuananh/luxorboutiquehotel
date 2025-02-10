@@ -71,7 +71,7 @@ Route::group(['namespace'=>'Client','middleware' => ['checkLanguage']], function
     Route::get('khuyen-mai/{slug}.html','PageController@detailKhuyenmai')->name('detailKhuyenmai');
 
     Route::get('dat-phong.html','PageController@orderNow')->name('orderNow');
-    Route::post('dat-phong.html','PageController@submitOrder')->name('submitOrder');
+    // Route::post('dat-phong.html','PageController@submitOrder')->name('submitOrder');
     Route::get('menu.html','PageController@menu')->name('menu');
     Route::get('account/orders','AuthController@accoungOrder')->name('accoungOrder')->middleware('CheckAuthClient::class');
     Route::get('account/orders/{billid}','AuthController@accoungOrderDetail')->name('accoungOrderDetail')->middleware('CheckAuthClient::class');
