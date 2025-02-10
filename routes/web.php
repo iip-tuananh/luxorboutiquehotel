@@ -25,7 +25,6 @@ Route::get('/crm', function () {
 //     return view('app');
 // });
 Route::get('/','HomeController@home')->name('home')->middleware(checkLanguage::class);
-Route::post('/','HomeController@postHome')->name('postHome');
 Route::group(['namespace'=>'Client','middleware' => ['checkLanguage']], function(){
     Route::get('get-variant.html','ProductController@getSku')->name('getSku');
     Route::get('type-product/{id}','PageController@typeproduct');
