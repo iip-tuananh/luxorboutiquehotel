@@ -95,7 +95,7 @@
             src="//book.securebookings.net/searchWidgetCustomize?lang=en&id=5492ea90-15a0-1732871736-4060-9f95-a486922f3417&ajax=true">
         </script>
         <script type="text/javascript">
-            jQuery(window).load(function() {
+            window.addEventListener("load", (event) => {
                 if (jQuery('#searchWidgetForm').length) {
                     jQuery('#searchWidgetForm').attr('method', 'GET');
                 }
