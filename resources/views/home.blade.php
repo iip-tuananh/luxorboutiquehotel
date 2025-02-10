@@ -94,7 +94,18 @@
         <script type="text/javascript"
             src="//book.securebookings.net/searchWidgetCustomize?lang=en&id=5492ea90-15a0-1732871736-4060-9f95-a486922f3417&ajax=true">
         </script>
-
+        <script type="text/javascript">
+            jQuery(window).load(function() {
+                if (jQuery('#searchWidgetForm').length) {
+                    jQuery('#searchWidgetForm').attr('method', 'GET');
+                }
+                else {
+                    setTimeout(function() {
+                    jQuery('#searchWidgetForm').attr('method', 'GET');
+                    }, 1000);
+                }
+            });
+        </script>
         <style>
             #hbe-bws-wrapper-widget-code {
                 text-align: center !important;
