@@ -35,6 +35,10 @@ class PageController extends Controller
     {
         return view('orderNow');
     }
+    public function submitOrder()
+    {
+        return view('orderNow');
+    }
     public function baogia()
     {
         return view('baogia');
